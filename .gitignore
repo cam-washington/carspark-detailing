@@ -1,0 +1,10 @@
+# OS / system files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# Editor / temp
+*.swp
+*~
+*.log
