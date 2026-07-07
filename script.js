@@ -29,7 +29,7 @@
   window.addEventListener("resize", () => { if (window.innerWidth > 860) setMenu(false); });
 
   /* ---------- Scroll reveal (with light stagger) ---------- */
-  $$(".cards, .gallery, .steps, .quotes, .incl, .plans, .hero__copy, .section__head").forEach((group) => {
+  $$(".cards, .gallery, .steps, .quotes, .incl, .plans, .services, .faq, .hero__copy, .section__head").forEach((group) => {
     [...group.children].forEach((child, i) => {
       if (child.classList.contains("reveal")) child.style.transitionDelay = Math.min(i * 70, 350) + "ms";
     });

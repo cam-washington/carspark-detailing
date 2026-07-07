@@ -1,0 +1,6 @@
+# Car Spark Mobile Auto Detailing
+User-agent: *
+Allow: /
+
+# Replace {{DOMAIN}} with your live URL once the domain is set up
+Sitemap: {{DOMAIN}}/sitemap.xml

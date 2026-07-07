@@ -3,22 +3,178 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Car Spark Mobile Auto Detailing | Sparks, NV</title>
-  <meta name="description" content="Premium mobile auto detailing in Sparks, NV. Car Spark brings a full interior &amp; exterior detail straight to your driveway. Text (775) 409-5831 to book." />
+  <title>Mobile Car Detailing in Sparks &amp; Reno, NV | Car Spark</title>
+  <meta name="description" content="Mobile auto detailing in Sparks &amp; Reno, NV. Car Spark brings a full interior &amp; exterior detail to your driveway, from $150. Text (775) 409-5831 to book." />
   <meta name="theme-color" content="#0a0a0c" />
 
+  <!-- Canonical (update {{DOMAIN}} once the domain is live) -->
+  <link rel="canonical" href="{{DOMAIN}}/" />
+
+  <!-- Geo targeting -->
+  <meta name="geo.region" content="US-NV" />
+  <meta name="geo.placename" content="Sparks, Nevada" />
+  <meta name="geo.position" content="39.5349;-119.7527" />
+  <meta name="ICBM" content="39.5349, -119.7527" />
+
   <!-- Open Graph -->
-  <meta property="og:title" content="Car Spark Mobile Auto Detailing | Sparks, NV" />
-  <meta property="og:description" content="A full interior &amp; exterior detail, delivered to your driveway in Sparks, NV." />
+  <meta property="og:site_name" content="Car Spark Mobile Auto Detailing" />
+  <meta property="og:title" content="Mobile Car Detailing in Sparks &amp; Reno, NV | Car Spark" />
+  <meta property="og:description" content="A full interior &amp; exterior detail, delivered to your driveway across Sparks, Reno &amp; Washoe County, NV." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="images/corvette-front.jpg" />
+  <meta property="og:url" content="{{DOMAIN}}/" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:image" content="{{DOMAIN}}/images/corvette-front.jpg" />
+  <meta property="og:image:alt" content="A glossy blue C8 Corvette after a full Car Spark detail" />
+
+  <!-- Twitter card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Mobile Car Detailing in Sparks &amp; Reno, NV | Car Spark" />
+  <meta name="twitter:description" content="A full interior &amp; exterior detail, delivered to your driveway across Sparks, Reno &amp; Washoe County, NV." />
+  <meta name="twitter:image" content="{{DOMAIN}}/images/corvette-front.jpg" />
 
   <link rel="icon" href="images/logo.jpg" />
 
-  <!-- Fonts: Sora (display) + Jost (body) -->
+  <!-- ===== Structured data: LocalBusiness + FAQPage =====
+       Replace {{DOMAIN}} with your live URL. Add your Google Business Profile
+       URL to "sameAs" once the listing is published. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": ["AutoWash", "LocalBusiness"],
+        "@id": "{{DOMAIN}}/#business",
+        "name": "Car Spark Mobile Auto Detailing",
+        "description": "Mobile auto detailing serving Sparks, Reno and Washoe County, NV. Full interior and exterior details brought to your driveway, by appointment seven days a week.",
+        "url": "{{DOMAIN}}/",
+        "image": "{{DOMAIN}}/images/corvette-front.jpg",
+        "logo": "{{DOMAIN}}/images/logo.jpg",
+        "telephone": "+1-775-409-5831",
+        "email": "sparksmobileautodetailing@gmail.com",
+        "priceRange": "$$",
+        "currenciesAccepted": "USD",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Sparks",
+          "addressRegion": "NV",
+          "addressCountry": "US"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 39.5349,
+          "longitude": -119.7527
+        },
+        "areaServed": [
+          { "@type": "City", "name": "Sparks" },
+          { "@type": "City", "name": "Reno" },
+          { "@type": "AdministrativeArea", "name": "Washoe County, Nevada" }
+        ],
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+            "opens": "00:00",
+            "closes": "23:59",
+            "description": "By appointment"
+          }
+        ],
+        "makesOffer": [
+          {
+            "@type": "Offer",
+            "name": "Full Detail Package — Sedan / Coupe",
+            "priceCurrency": "USD",
+            "price": "150",
+            "description": "Complete interior and exterior detail in a single visit."
+          },
+          {
+            "@type": "Offer",
+            "name": "Full Detail Package — SUV / Truck",
+            "priceCurrency": "USD",
+            "price": "170",
+            "description": "Complete interior and exterior detail in a single visit."
+          },
+          {
+            "@type": "Offer",
+            "name": "Maintenance Detail",
+            "priceCurrency": "USD",
+            "price": "100",
+            "description": "Recurring monthly or bi-monthly upkeep detail."
+          }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/carsparkmobileautodetailing/"
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "{{DOMAIN}}/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Do you come to me, or do I drop my car off?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We're fully mobile — we come to you. We set up and detail your vehicle right in your driveway or parking spot anywhere in Sparks, Reno and the surrounding Washoe County area. There's no drop-off; you can stay home or at work while we handle it."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What areas do you serve?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sparks and Reno, NV, plus the surrounding Washoe County communities. If you're not sure whether you're in range, text us your address and we'll confirm."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does a full detail take?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A full interior and exterior detail usually takes about 2 to 4 hours, depending on the size of the vehicle and how much cleanup it needs. Trucks, SUVs and heavily soiled interiors take longer. We'd rather take the time to do it right than rush and cut corners."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much does a detail cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Pricing is fixed, so there's never a wait on a quote. A full interior and exterior detail is $150 for sedans and coupes, or $170 for SUVs and trucks. A recurring maintenance detail is $100 on a monthly or bi-monthly schedule."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need to provide anything?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Just two things: access to a water hose and a power outlet. Because we come to you, we tap into those on-site — we bring all the products, tools and equipment ourselves."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you offer paint correction or ceramic coating?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Not at this time. We focus on doing full interior and exterior details extremely well rather than spreading into services we can't stand behind. If that changes, it'll be listed here first."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I book, and when are you available?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Text or email us with your vehicle and where you're located. We run by appointment seven days a week and will get you on the schedule at a time that works for you."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- Fonts: Sora (display) + Jost (body) + Space Mono (index labels) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;1,400&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;1,400&family=Sora:wght@500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -42,8 +198,10 @@
 
       <nav class="nav__links" aria-label="Primary">
         <a href="#why">Why us</a>
+        <a href="#services">Services</a>
         <a href="#work">Gallery</a>
         <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
       </nav>
 
@@ -64,8 +222,10 @@
     <div class="mobile-menu" id="mobileMenu" hidden>
       <nav aria-label="Mobile">
         <a href="#why">Why us</a>
+        <a href="#services">Services</a>
         <a href="#work">Gallery</a>
         <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
       </nav>
       <div class="mobile-menu__actions">
@@ -77,19 +237,22 @@
 
   <main id="main">
     <!-- ===== Hero ===== -->
-    <section class="hero">
-      <div class="container hero__grid">
+    <section class="hero hero--full">
+      <div class="hero__bg" aria-hidden="true">
+        <img src="images/g37-hero.jpg" alt="" width="1920" height="1342" fetchpriority="high" />
+      </div>
+      <div class="container">
         <div class="hero__copy">
-          <p class="overline reveal"><span class="dot"></span>Mobile auto detailing · Sparks, NV</p>
-          <h1 class="hero__title reveal">Showroom <em>shine</em>, delivered to your driveway.</h1>
-          <p class="hero__lede reveal">Car Spark brings a complete interior &amp; exterior detail straight to you. We make your vehicle look its absolute best — you never have to leave home.</p>
+          <p class="overline reveal"><span class="dot"></span>Mobile auto detailing · Sparks &amp; Reno, NV</p>
+          <h1 class="hero__title reveal">Mobile car detailing with showroom <em>shine</em> — <span class="hero__loc">Sparks &amp; Reno, NV.</span></h1>
+          <p class="hero__lede reveal">Car Spark brings a complete interior &amp; exterior detail straight to your driveway across Sparks, Reno &amp; Washoe County. We make your vehicle look its absolute best — you never have to leave home.</p>
 
           <div class="hero__cta reveal">
             <a class="btn btn--primary btn--lg" href="sms:+17754095831">
               <svg viewBox="0 0 24 24" class="ico" aria-hidden="true"><path d="M4 4h16a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1H8l-4 4z"/></svg>
               Text (775) 409-5831
             </a>
-            <a class="btn btn--outline btn--lg" href="#results">See the transformation</a>
+            <a class="btn btn--outline btn--lg" href="#work">See the transformation</a>
           </div>
 
           <ul class="hero__chips reveal" aria-label="Highlights">
@@ -98,16 +261,6 @@
             <li>Sedans · Coupes · SUVs · Trucks</li>
           </ul>
         </div>
-
-        <div class="hero__media reveal">
-          <div class="hero__frame">
-            <img src="images/corvette-front.jpg" alt="A glossy blue C8 Corvette after a full Car Spark detail" width="540" height="675" fetchpriority="high" />
-            <div class="hero__badge">
-              <span class="hero__badge-k">Full detail from</span>
-              <span class="hero__badge-v">$150</span>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -115,6 +268,7 @@
     <section class="section" id="why">
       <div class="container">
         <header class="section__head">
+          <p class="index-label reveal"><b>[01]</b> / Why Car Spark</p>
           <h2 class="section__title reveal">Detailing done right — and brought right to you.</h2>
         </header>
 
@@ -158,6 +312,7 @@
     <section class="section" id="included">
       <div class="container">
         <header class="section__head">
+          <p class="index-label reveal"><b>[02]</b> / What's Included</p>
           <h2 class="section__title reveal">One detail. Every corner covered.</h2>
         </header>
 
@@ -190,10 +345,50 @@
       </div>
     </section>
 
+    <!-- ===== Services ===== -->
+    <section class="section" id="services">
+      <div class="container">
+        <header class="section__head">
+          <p class="index-label reveal"><b>[03]</b> / What We Do</p>
+          <h2 class="section__title reveal">Mobile detailing services in Sparks &amp; Reno</h2>
+          <p class="section__sub reveal">Two straightforward services, fixed pricing, and everything done in your driveway. No packages to decode and no upsells.</p>
+        </header>
+
+        <div class="services">
+          <article class="service reveal">
+            <div class="service__top">
+              <h3 class="service__name">Full Interior &amp; Exterior Detail</h3>
+              <span class="service__price">From $150</span>
+            </div>
+            <p class="service__copy">Our signature service is a complete, single-visit detail that covers the whole vehicle inside and out. Inside, we clear the trash, vacuum every surface, shampoo the seats and carpets, wipe down the cabin, clean the interior glass and condition the trim. Outside, we pressure wash, run a shampoo foam wash, scrub the wheels and wheel wells, dress the tires, clean the exterior windows, lay down a spray wax and finish with a scratch-free dry. It's the same process whether you drive a daily commuter or a weekend car — nothing gets skipped. Because we're mobile, all of it happens in your driveway in Sparks or Reno while you go about your day.</p>
+            <p class="service__meta">$150 sedan &amp; coupe · $170 SUV &amp; truck</p>
+            <div class="service__actions">
+              <a class="btn btn--primary" href="sms:+17754095831">Text to book</a>
+              <a class="btn btn--outline" href="#pricing">See what's included</a>
+            </div>
+          </article>
+
+          <article class="service reveal">
+            <div class="service__top">
+              <h3 class="service__name">Maintenance Detail</h3>
+              <span class="service__price">$100 / visit</span>
+            </div>
+            <p class="service__copy">Once your car has had a full detail, a maintenance detail keeps it there without starting from scratch every time. On a monthly or bi-monthly visit we remove trash and vacuum the full interior, wipe everything down, then pressure wash and shampoo-foam the exterior, clean the exterior windows and finish with a scratch-free dry. It's a lighter, faster service built for upkeep rather than deep restoration — the easiest way to keep that fresh-detail feeling between full details. It's ideal for busy commuters and leased vehicles, or anyone who just likes their car looking cared-for all year. Like everything we do, it happens at your home or office anywhere in Sparks, Reno and Washoe County.</p>
+            <p class="service__meta">$100 per visit on a recurring monthly or bi-monthly schedule</p>
+            <div class="service__actions">
+              <a class="btn btn--primary" href="sms:+17754095831">Set up a plan</a>
+              <a class="btn btn--outline" href="tel:+17754095831">Call (775) 409-5831</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <!-- ===== Gallery ===== -->
     <section class="section" id="work">
       <div class="container">
         <header class="section__head">
+          <p class="index-label reveal"><b>[04]</b> / The Work</p>
           <h2 class="section__title reveal">A look at the finish.</h2>
         </header>
 
@@ -214,6 +409,10 @@
             <input class="ba__range" id="baRange" type="range" min="0" max="100" value="50" aria-label="Reveal before and after — slide to compare." />
             <figcaption>Interior — before &amp; after</figcaption>
           </figure>
+          <figure class="shot reveal"><img src="images/g37-front.jpg" alt="Blacked-out Infiniti G37 coupe, front three-quarter after a full detail" loading="lazy" width="900" height="1600" style="object-position:50% 56%"><figcaption>Infiniti G37 — front</figcaption></figure>
+          <figure class="shot reveal"><img src="images/g37-side.jpg" alt="Infiniti G37 coupe side profile, glossy black paint" loading="lazy" width="900" height="1600" style="object-position:50% 46%"><figcaption>G37 — side profile</figcaption></figure>
+          <figure class="shot reveal"><img src="images/g37-rear.jpg" alt="Infiniti G37 coupe rear three-quarter, detailed" loading="lazy" width="1600" height="900" style="object-position:46% 50%"><figcaption>G37 — rear</figcaption></figure>
+          <figure class="shot reveal"><img src="images/g37-rear-side.jpg" alt="Infiniti G37 coupe rear quarter, glossy finish" loading="lazy" width="1600" height="900" style="object-position:44% 50%"><figcaption>G37 — rear quarter</figcaption></figure>
           <figure class="shot reveal" data-span="tall"><img src="images/corvette-front.jpg" alt="Blue C8 Corvette front three-quarter, freshly detailed" loading="lazy" width="540" height="675"><figcaption>C8 Corvette — exterior gloss</figcaption></figure>
           <figure class="shot reveal"><img src="images/corvette-wheel.jpg" alt="C8 Corvette wheel and brake caliper after cleaning" loading="lazy" width="540" height="675"><figcaption>Wheels &amp; calipers</figcaption></figure>
           <figure class="shot reveal"><img src="images/corvette-interior.jpg" alt="C8 Corvette black leather interior, cleaned and conditioned" loading="lazy" width="540" height="675"><figcaption>Corvette — interior</figcaption></figure>
@@ -230,6 +429,7 @@
     <section class="section" id="pricing">
       <div class="container">
         <header class="section__head section__head--center">
+          <p class="index-label reveal"><b>[05]</b> / Pricing</p>
           <h2 class="section__title reveal">Pricing</h2>
         </header>
 
@@ -278,6 +478,7 @@
     <section class="section section--tight" id="how">
       <div class="container">
         <header class="section__head">
+          <p class="index-label reveal"><b>[06]</b> / How It Works</p>
           <h2 class="section__title reveal">How it works</h2>
         </header>
         <ol class="steps">
@@ -285,6 +486,55 @@
           <li class="step reveal"><span class="step__num">02</span><h3>We come to you</h3><p>Have a water hose and power outlet ready. We arrive with all the gear, products and water-fed tools.</p></li>
           <li class="step reveal"><span class="step__num">03</span><h3>Showroom finish</h3><p>Relax while we detail inside and out, then hand back a vehicle that looks its absolute best.</p></li>
         </ol>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="section section--tight" id="faq">
+      <div class="container">
+        <header class="section__head">
+          <p class="index-label reveal"><b>[07]</b> / Good To Know</p>
+          <h2 class="section__title reveal">Frequently asked questions</h2>
+        </header>
+
+        <div class="faq">
+          <details class="faq__item reveal">
+            <summary>Do you come to me, or do I drop my car off?</summary>
+            <div class="faq__a"><p>We're fully mobile — we come to you. We set up and detail your vehicle right in your driveway or parking spot anywhere in Sparks, Reno and the surrounding Washoe County area. There's no drop-off; you can stay home or at work while we handle it.</p></div>
+          </details>
+
+          <details class="faq__item reveal">
+            <summary>What areas do you serve?</summary>
+            <div class="faq__a"><p>Sparks and Reno, NV, plus the surrounding Washoe County communities. If you're not sure whether you're in range, text us your address and we'll confirm.</p></div>
+          </details>
+
+          <details class="faq__item reveal">
+            <summary>How long does a full detail take?</summary>
+            <div class="faq__a"><p>A full interior and exterior detail usually takes about 2 to 4 hours, depending on the size of the vehicle and how much cleanup it needs. Trucks, SUVs and heavily soiled interiors take longer. We'd rather take the time to do it right than rush and cut corners.</p></div>
+          </details>
+
+          <details class="faq__item reveal">
+            <summary>How much does a detail cost?</summary>
+            <div class="faq__a"><p>Pricing is fixed, so there's never a wait on a quote. A full interior and exterior detail is $150 for sedans and coupes, or $170 for SUVs and trucks. A recurring maintenance detail is $100 on a monthly or bi-monthly schedule.</p></div>
+          </details>
+
+          <details class="faq__item reveal">
+            <summary>Do I need to provide anything?</summary>
+            <div class="faq__a"><p>Just two things: access to a water hose and a power outlet. Because we come to you, we tap into those on-site — we bring all the products, tools and equipment ourselves.</p></div>
+          </details>
+
+          <details class="faq__item reveal">
+            <summary>Do you offer paint correction or ceramic coating?</summary>
+            <div class="faq__a"><p>Not at this time. We focus on doing full interior and exterior details extremely well rather than spreading into services we can't stand behind. If that changes, it'll be listed here first.</p></div>
+          </details>
+
+          <details class="faq__item reveal">
+            <summary>How do I book, and when are you available?</summary>
+            <div class="faq__a"><p>Text or email us with your vehicle and where you're located. We run by appointment seven days a week and will get you on the schedule at a time that works for you.</p></div>
+          </details>
+        </div>
+
+        <p class="faq__foot reveal">Still have a question? <a href="sms:+17754095831">Text (775)&nbsp;409-5831</a> and we'll answer.</p>
       </div>
     </section>
 
@@ -303,7 +553,7 @@
                 <svg viewBox="0 0 24 24" class="ico" aria-hidden="true"><path d="M4 4h16a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1H8l-4 4z"/></svg>
                 Text (775) 409-5831
               </a>
-              <a class="btn btn--outline btn--lg" href="mailto:cameronwashington913@gmail.com?subject=Detailing%20appointment">
+              <a class="btn btn--outline btn--lg" href="mailto:sparksmobileautodetailing@gmail.com?subject=Detailing%20appointment">
                 <svg viewBox="0 0 24 24" class="ico" aria-hidden="true"><path d="M3 6h18v12H3z"/><path d="M3 7l9 6 9-6"/></svg>
                 Email us
               </a>
@@ -316,11 +566,11 @@
               </li>
               <li>
                 <svg viewBox="0 0 24 24" class="ico" aria-hidden="true"><path d="M3 6h18v12H3z"/><path d="M3 7l9 6 9-6"/></svg>
-                <a href="mailto:cameronwashington913@gmail.com">cameronwashington913@gmail.com</a>
+                <a href="mailto:sparksmobileautodetailing@gmail.com">sparksmobileautodetailing@gmail.com</a>
               </li>
               <li>
                 <svg viewBox="0 0 24 24" class="ico" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2"/></svg>
-                <a href="https://www.instagram.com/carsparkmobileautodetaling/" target="_blank" rel="noopener">@carsparkmobileautodetaling</a>
+                <a href="https://www.instagram.com/carsparkmobileautodetailing/" target="_blank" rel="noopener">@carsparkmobileautodetailing</a>
               </li>
             </ul>
           </div>
@@ -343,16 +593,18 @@
       <nav class="footer__nav" aria-label="Footer">
         <h4>Explore</h4>
         <a href="#why">Why us</a>
+        <a href="#services">Services</a>
         <a href="#work">Gallery</a>
         <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
       </nav>
 
       <div class="footer__contact">
         <h4>Get in touch</h4>
         <a href="sms:+17754095831">Text (775) 409-5831</a>
         <a href="tel:+17754095831">Call (775) 409-5831</a>
-        <a href="mailto:cameronwashington913@gmail.com">cameronwashington913@gmail.com</a>
-        <a href="https://www.instagram.com/carsparkmobileautodetaling/" target="_blank" rel="noopener">Instagram</a>
+        <a href="mailto:sparksmobileautodetailing@gmail.com">sparksmobileautodetailing@gmail.com</a>
+        <a href="https://www.instagram.com/carsparkmobileautodetailing/" target="_blank" rel="noopener">Instagram</a>
       </div>
     </div>
     <div class="container footer__base">
