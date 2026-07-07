@@ -249,9 +249,54 @@ h1,h2,h3,h4 { font-family: "Sora", sans-serif; font-weight: 700; line-height: 1.
 /* vignette + hover ring (sinks busy backgrounds into the dark theme) */
 .shot::after { content: ""; position: absolute; inset: 0; z-index: 2; pointer-events: none; background: radial-gradient(125% 90% at 50% 36%, transparent 44%, rgba(8,8,12,.55) 100%); box-shadow: inset 0 0 0 1px transparent; transition: box-shadow .3s; }
 .shot:hover::after { box-shadow: inset 0 0 0 2px var(--violet); }
-/* mono portfolio index (skip the before/after tile — its corners hold the B/A tags) */
-.shot:not(.shot--ba) { counter-increment: galix; }
-.shot:not(.shot--ba)::before { content: "[" counter(galix, decimal-leading-zero) "]"; position: absolute; top: 12px; right: 12px; z-index: 3; font-family: var(--mono); font-size: .7rem; letter-spacing: .06em; color: #fff; text-shadow: 0 1px 5px rgba(0,0,0,.85); }
+/* mono portfolio index */
+.shot { counter-increment: galix; }
+.shot::before { content: "[" counter(galix, decimal-leading-zero) "]"; position: absolute; top: 12px; right: 12px; z-index: 3; font-family: var(--mono); font-size: .7rem; letter-spacing: .06em; color: #fff; text-shadow: 0 1px 5px rgba(0,0,0,.85); }
+
+/* ---------- Per-car carousel cards ---------- */
+.car__track {
+  position: absolute; inset: 0; display: flex;
+  overflow-x: auto; overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory; scrollbar-width: none;
+}
+.car__track::-webkit-scrollbar { display: none; }
+.car__track:focus-visible { outline: 2px solid var(--violet-bright); outline-offset: -2px; }
+.car__slide { position: relative; flex: 0 0 100%; scroll-snap-align: start; }
+.car__slide img { width: 100%; height: 100%; object-fit: cover; }
+.car:hover .car__slide img { transform: none; } /* no zoom-on-hover inside carousels */
+
+.car__nav {
+  position: absolute; top: 50%; transform: translateY(-50%); z-index: 4;
+  width: 44px; height: 44px; border-radius: 50%;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: rgba(13,13,17,.62); backdrop-filter: blur(6px);
+  border: 1px solid var(--line-2); color: #fff;
+  transition: background .2s var(--ease), border-color .2s var(--ease), opacity .2s;
+}
+.car__nav svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.car__nav:hover { background: rgba(124,77,255,.5); border-color: var(--violet); }
+.car__nav--prev { left: 10px; }
+.car__nav--next { right: 10px; }
+.car__nav[disabled] { opacity: .35; pointer-events: none; }
+
+.car__count {
+  position: absolute; top: 12px; left: 12px; z-index: 3;
+  font-family: var(--mono); font-size: .7rem; letter-spacing: .06em;
+  color: #fff; text-shadow: 0 1px 5px rgba(0,0,0,.85);
+}
+.car__dots {
+  position: absolute; left: 0; right: 0; bottom: 2.5rem; z-index: 4;
+  display: flex; justify-content: center; gap: .45rem; pointer-events: none;
+}
+.car__dots button {
+  width: 8px; height: 8px; padding: 0; border-radius: 50%; border: 0;
+  background: rgba(255,255,255,.38); pointer-events: auto;
+  transition: background .2s var(--ease), transform .2s var(--ease);
+}
+.car__dots button.active { background: var(--grad); transform: scale(1.25); box-shadow: 0 0 8px rgba(124,77,255,.8); }
+
+/* the B/A compare lives as a slide inside the Hyundai card */
+.car__slide.shot--ba { border-radius: 0; border: 0; aspect-ratio: auto; }
 
 /* ---------- Pricing ---------- */
 .plans { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.4rem; max-width: 900px; margin-inline: auto; }
@@ -368,8 +413,9 @@ h1,h2,h3,h4 { font-family: "Sora", sans-serif; font-weight: 700; line-height: 1.
 }
 
 @media (max-width: 560px) {
-  .cards, .incl, .gallery { grid-template-columns: 1fr; }
-  .gallery { grid-template-columns: 1fr 1fr; }
+  .cards, .incl { grid-template-columns: 1fr; }
+  /* carousel cards go full-width on phones: bigger swipe area, Instagram-like feed */
+  .gallery { grid-template-columns: 1fr; }
   .footer__grid { grid-template-columns: 1fr; }
   .hero__cta .btn, .cta__actions .btn { width: 100%; }
   .section__head { margin-bottom: 2rem; }

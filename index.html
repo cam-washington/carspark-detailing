@@ -391,35 +391,256 @@
           <h2 class="section__title reveal">A look at the finish.</h2>
         </header>
 
+        <!-- Each car = one carousel card. To add a car: drop optimized photos in images/
+             (sips -Z 1600 -s format jpeg -s formatOptions 72), copy a figure block below,
+             update the img srcs/alts and the caption. Arrows/dots/counter wire themselves. -->
         <div class="gallery" id="gallery">
-          <figure class="shot shot--ba reveal" id="beforeAfter">
-            <div class="ba__viewport">
-              <img class="ba__img ba__img--after" src="images/hyundai-after.jpg" alt="Hyundai rear seats after detailing — clean leather and carpet" width="810" height="1012" loading="lazy" />
-              <div class="ba__clip" id="baClip">
-                <img class="ba__img ba__img--before" src="images/hyundai-before.jpg" alt="Hyundai rear seats before detailing — crumbs and debris on the seat and floor" width="810" height="1012" loading="lazy" />
-              </div>
-              <div class="ba__handle" id="baHandle" role="presentation">
-                <span class="ba__line"></span>
-                <span class="ba__grip" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 7l-4 5 4 5M15 7l4 5-4 5"/></svg></span>
-              </div>
-              <span class="ba__tag ba__tag--before">Before</span>
-              <span class="ba__tag ba__tag--after">After</span>
+
+          <figure class="shot car reveal" data-carousel aria-roledescription="carousel" aria-label="C8 Corvette photos">
+            <div class="car__track" tabindex="0">
+              <div class="car__slide"><img src="images/corvette-c7-1.jpg" alt="Blue C8 Corvette front three-quarter, freshly detailed" loading="lazy"></div>
+              <div class="car__slide"><img src="images/corvette-c7-2.jpg" alt="Blue C8 Corvette front, glossy paint" loading="lazy"></div>
+              <div class="car__slide"><img src="images/corvette-c7-3.jpg" alt="C8 Corvette rear in the shop" loading="lazy"></div>
+              <div class="car__slide"><img src="images/corvette-c7-4.jpg" alt="C8 Corvette black leather interior, cleaned and conditioned" loading="lazy"></div>
+              <div class="car__slide"><img src="images/corvette-c7-5.jpg" alt="C8 Corvette wheel and red brake caliper after cleaning" loading="lazy"></div>
             </div>
-            <input class="ba__range" id="baRange" type="range" min="0" max="100" value="50" aria-label="Reveal before and after — slide to compare." />
-            <figcaption>Interior — before &amp; after</figcaption>
+            <button class="car__nav car__nav--prev" type="button" aria-label="Previous photo"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></button>
+            <button class="car__nav car__nav--next" type="button" aria-label="Next photo"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
+            <span class="car__count" aria-hidden="true"></span>
+            <div class="car__dots" aria-hidden="true"></div>
+            <figcaption>C8 Corvette — full detail</figcaption>
           </figure>
-          <figure class="shot reveal"><img src="images/g37-front.jpg" alt="Blacked-out Infiniti G37 coupe, front three-quarter after a full detail" loading="lazy" width="900" height="1600" style="object-position:50% 56%"><figcaption>Infiniti G37 — front</figcaption></figure>
-          <figure class="shot reveal"><img src="images/g37-side.jpg" alt="Infiniti G37 coupe side profile, glossy black paint" loading="lazy" width="900" height="1600" style="object-position:50% 46%"><figcaption>G37 — side profile</figcaption></figure>
-          <figure class="shot reveal"><img src="images/g37-rear.jpg" alt="Infiniti G37 coupe rear three-quarter, detailed" loading="lazy" width="1600" height="900" style="object-position:46% 50%"><figcaption>G37 — rear</figcaption></figure>
-          <figure class="shot reveal"><img src="images/g37-rear-side.jpg" alt="Infiniti G37 coupe rear quarter, glossy finish" loading="lazy" width="1600" height="900" style="object-position:44% 50%"><figcaption>G37 — rear quarter</figcaption></figure>
-          <figure class="shot reveal" data-span="tall"><img src="images/corvette-front.jpg" alt="Blue C8 Corvette front three-quarter, freshly detailed" loading="lazy" width="540" height="675"><figcaption>C8 Corvette — exterior gloss</figcaption></figure>
-          <figure class="shot reveal"><img src="images/corvette-wheel.jpg" alt="C8 Corvette wheel and brake caliper after cleaning" loading="lazy" width="540" height="675"><figcaption>Wheels &amp; calipers</figcaption></figure>
-          <figure class="shot reveal"><img src="images/corvette-interior.jpg" alt="C8 Corvette black leather interior, cleaned and conditioned" loading="lazy" width="540" height="675"><figcaption>Corvette — interior</figcaption></figure>
-          <figure class="shot reveal" data-span="tall"><img src="images/landcruiser-front.jpg" alt="Classic Toyota Land Cruiser detailed, with the Sierra foothills behind it" loading="lazy" width="540" height="675"><figcaption>Land Cruiser — exterior</figcaption></figure>
-          <figure class="shot reveal"><img src="images/impala-frontseat.jpg" alt="Impala front seats after an interior shampoo" loading="lazy" width="540" height="675"><figcaption>Impala — interior shampoo</figcaption></figure>
-          <figure class="shot reveal"><img src="images/corvette-rear.jpg" alt="Blue C8 Corvette rear, glossy paint finish" loading="lazy" width="540" height="675"><figcaption>Corvette — rear</figcaption></figure>
-          <figure class="shot reveal"><img src="images/landcruiser-inside.jpg" alt="Land Cruiser interior after detailing" loading="lazy" width="540" height="675"><figcaption>Land Cruiser — interior</figcaption></figure>
-          <figure class="shot reveal"><img src="images/impala-backseat.jpg" alt="Impala rear seats cleaned" loading="lazy" width="540" height="675"><figcaption>Impala — rear seats</figcaption></figure>
+
+          <figure class="shot car reveal" data-carousel aria-roledescription="carousel" aria-label="C6 Corvette photos">
+            <div class="car__track" tabindex="0">
+              <div class="car__slide"><img src="images/corvette-c6-1.jpg" alt="Blue C6 Corvette front three-quarter after a full detail" loading="lazy"></div>
+              <div class="car__slide"><img src="images/corvette-c6-2.jpg" alt="C6 Corvette rear, glossy finish" loading="lazy"></div>
+              <div class="car__slide"><img src="images/corvette-c6-3.jpg" alt="C6 Corvette two-tone leather seats after interior detail" loading="lazy"></div>
+              <div class="car__slide"><img src="images/corvette-c6-4.jpg" alt="C6 Corvette chrome wheel and red caliper after cleaning" loading="lazy"></div>
+            </div>
+            <button class="car__nav car__nav--prev" type="button" aria-label="Previous photo"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></button>
+            <button class="car__nav car__nav--next" type="button" aria-label="Next photo"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
+            <span class="car__count" aria-hidden="true"></span>
+            <div class="car__dots" aria-hidden="true"></div>
+            <figcaption>C6 Corvette — full detail</figcaption>
+          </figure>
+
+          <figure class="shot car reveal" data-carousel aria-roledescription="carousel" aria-label="Toyota Land Cruiser photos">
+            <div class="car__track" tabindex="0">
+              <div class="car__slide"><img src="images/landcruiser-1.jpg" alt="Classic Toyota Land Cruiser FJ40 detailed, with the Sierra foothills behind it" loading="lazy"></div>
+              <div class="car__slide"><img src="images/landcruiser-2.jpg" alt="Classic Land Cruiser FJ40 rear after detailing" loading="lazy"></div>
+              <div class="car__slide"><img src="images/landcruiser-3.jpg" alt="Land Cruiser interior with wood steering wheel after detailing" loading="lazy"></div>
+            </div>
+            <button class="car__nav car__nav--prev" type="button" aria-label="Previous photo"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></button>
+            <button class="car__nav car__nav--next" type="button" aria-label="Next photo"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
+            <span class="car__count" aria-hidden="true"></span>
+            <div class="car__dots" aria-hidden="true"></div>
+            <figcaption>Land Cruiser — full detail</figcaption>
+          </figure>
+
+          <figure class="shot car reveal" data-carousel aria-roledescription="carousel" aria-label="Chevrolet Impala photos">
+            <div class="car__track" tabindex="0">
+              <div class="car__slide"><img src="images/impala-1.jpg" alt="Classic black Chevrolet Impala front after detailing" loading="lazy"></div>
+              <div class="car__slide"><img src="images/impala-2.jpg" alt="Classic Impala front in the shop" loading="lazy"></div>
+              <div class="car__slide"><img src="images/impala-3.jpg" alt="Classic Impala rear, glossy black paint" loading="lazy"></div>
+              <div class="car__slide"><img src="images/impala-4.jpg" alt="Impala brown bench seats after an interior shampoo" loading="lazy"></div>
+              <div class="car__slide"><img src="images/impala-5.jpg" alt="Impala front bench after conditioning" loading="lazy"></div>
+              <div class="car__slide"><img src="images/impala-6.jpg" alt="Impala rear bench and floor mats cleaned" loading="lazy"></div>
+            </div>
+            <button class="car__nav car__nav--prev" type="button" aria-label="Previous photo"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></button>
+            <button class="car__nav car__nav--next" type="button" aria-label="Next photo"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
+            <span class="car__count" aria-hidden="true"></span>
+            <div class="car__dots" aria-hidden="true"></div>
+            <figcaption>Impala — full detail</figcaption>
+          </figure>
+
+          <figure class="shot car reveal" data-carousel aria-roledescription="carousel" aria-label="Hyundai interior photos">
+            <div class="car__track" tabindex="0">
+              <div class="car__slide shot--ba" id="beforeAfter">
+                <div class="ba__viewport">
+                  <img class="ba__img ba__img--after" src="images/hyundai-after.jpg" alt="Hyundai rear seats after detailing — clean leather and carpet" width="810" height="1012" loading="lazy" />
+                  <div class="ba__clip" id="baClip">
+                    <img class="ba__img ba__img--before" src="images/hyundai-before.jpg" alt="Hyundai rear seats before detailing — crumbs and debris on the seat and floor" width="810" height="1012" loading="lazy" />
+                  </div>
+                  <div class="ba__handle" id="baHandle" role="presentation">
+                    <span class="ba__line"></span>
+                    <span class="ba__grip" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 7l-4 5 4 5M15 7l4 5-4 5"/></svg></span>
+                  </div>
+                  <span class="ba__tag ba__tag--before">Before</span>
+                  <span class="ba__tag ba__tag--after">After</span>
+                </div>
+                <input class="ba__range" id="baRange" type="range" min="0" max="100" value="50" aria-label="Reveal before and after — slide to compare." />
+              </div>
+            </div>
+            <button class="car__nav car__nav--prev" type="button" aria-label="Previous photo"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></button>
+            <button class="car__nav car__nav--next" type="button" aria-label="Next photo"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
+            <span class="car__count" aria-hidden="true"></span>
+            <div class="car__dots" aria-hidden="true"></div>
+            <figcaption>Hyundai Tucson — before &amp; after</figcaption>
+          </figure>
+
+          <figure class="shot car reveal" data-carousel aria-roledescription="carousel" aria-label="Lexus RX photos">
+            <div class="car__track" tabindex="0">
+              <div class="car__slide"><img src="images/lexus-rx-1.jpg" alt="Lexus RX side profile after a full detail" loading="lazy"></div>
+              <div class="car__slide"><img src="images/lexus-rx-2.jpg" alt="Lexus RX rear three-quarter, glossy paint" loading="lazy"></div>
+              <div class="car__slide"><img src="images/lexus-rx-3.jpg" alt="Lexus RX front grille after detailing" loading="lazy"></div>
+              <div class="car__slide"><img src="images/lexus-rx-4.jpg" alt="Lexus RX dashboard and interior cleaned" loading="lazy"></div>
+              <div class="car__slide"><img src="images/lexus-rx-5.jpg" alt="Lexus RX cargo area cleaned" loading="lazy"></div>
+              <div class="car__slide"><img src="images/lexus-rx-6.jpg" alt="Lexus RX wheel after cleaning and tire shine" loading="lazy"></div>
+            </div>
+            <button class="car__nav car__nav--prev" type="button" aria-label="Previous photo"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></button>
+            <button class="car__nav car__nav--next" type="button" aria-label="Next photo"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
+            <span class="car__count" aria-hidden="true"></span>
+            <div class="car__dots" aria-hidden="true"></div>
+            <figcaption>Lexus RX — full detail</figcaption>
+          </figure>
+
+          <figure class="shot car reveal" data-carousel aria-roledescription="carousel" aria-label="BMW 3-series photos">
+            <div class="car__track" tabindex="0">
+              <div class="car__slide"><img src="images/bmw3-1.jpg" alt="BMW 3-series covered in foam during a wash" loading="lazy"></div>
+              <div class="car__slide"><img src="images/bmw3-2.jpg" alt="Dark blue BMW 3-series side and wheel after detailing" loading="lazy"></div>
+              <div class="car__slide"><img src="images/bmw3-3.jpg" alt="Dark blue BMW 3-series side profile" loading="lazy"></div>
+              <div class="car__slide"><img src="images/bmw3-4.jpg" alt="BMW 3-series gray leather rear seats cleaned" loading="lazy"></div>
+              <div class="car__slide"><img src="images/bmw3-5.jpg" alt="BMW 3-series trunk cleaned" loading="lazy"></div>
+            </div>
+            <button class="car__nav car__nav--prev" type="button" aria-label="Previous photo"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></button>
+            <button class="car__nav car__nav--next" type="button" aria-label="Next photo"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
+            <span class="car__count" aria-hidden="true"></span>
+            <div class="car__dots" aria-hidden="true"></div>
+            <figcaption>BMW 3-series — full detail</figcaption>
+          </figure>
+
+          <figure class="shot car reveal" data-carousel aria-roledescription="carousel" aria-label="BMW X5 photos">
+            <div class="car__track" tabindex="0">
+              <div class="car__slide"><img src="images/bmw-x5-1.jpg" alt="Blue BMW X5 rear after a full detail" loading="lazy"></div>
+              <div class="car__slide"><img src="images/bmw-x5-2.jpg" alt="Blue BMW X5 side profile" loading="lazy"></div>
+              <div class="car__slide"><img src="images/bmw-x5-3.jpg" alt="BMW X5 cockpit and brown leather interior cleaned" loading="lazy"></div>
+              <div class="car__slide"><img src="images/bmw-x5-4.jpg" alt="BMW X5 brown leather rear seats conditioned" loading="lazy"></div>
+            </div>
+            <button class="car__nav car__nav--prev" type="button" aria-label="Previous photo"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></button>
+            <button class="car__nav car__nav--next" type="button" aria-label="Next photo"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
+            <span class="car__count" aria-hidden="true"></span>
+            <div class="car__dots" aria-hidden="true"></div>
+            <figcaption>BMW X5 — full detail</figcaption>
+          </figure>
+
+          <figure class="shot car reveal" data-carousel aria-roledescription="carousel" aria-label="Toyota Highlander photos">
+            <div class="car__track" tabindex="0">
+              <div class="car__slide"><img src="images/highlander-1.jpg" alt="White Toyota Highlander front after a full detail" loading="lazy"></div>
+              <div class="car__slide"><img src="images/highlander-2.jpg" alt="White Toyota Highlander front three-quarter" loading="lazy"></div>
+              <div class="car__slide"><img src="images/highlander-3.jpg" alt="Toyota Highlander interior cleaned" loading="lazy"></div>
+              <div class="car__slide"><img src="images/highlander-4.jpg" alt="Toyota Highlander leather seats conditioned" loading="lazy"></div>
+              <div class="car__slide"><img src="images/highlander-5.jpg" alt="Toyota Highlander rear detail" loading="lazy"></div>
+              <div class="car__slide"><img src="images/highlander-6.jpg" alt="Toyota Highlander wheel after cleaning" loading="lazy"></div>
+            </div>
+            <button class="car__nav car__nav--prev" type="button" aria-label="Previous photo"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></button>
+            <button class="car__nav car__nav--next" type="button" aria-label="Next photo"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
+            <span class="car__count" aria-hidden="true"></span>
+            <div class="car__dots" aria-hidden="true"></div>
+            <figcaption>Toyota Highlander — full detail</figcaption>
+          </figure>
+
+          <figure class="shot car reveal" data-carousel aria-roledescription="carousel" aria-label="Classic panel truck photos">
+            <div class="car__track" tabindex="0">
+              <div class="car__slide"><img src="images/paneltruck-1.jpg" alt="Classic red panel truck side after detailing" loading="lazy"></div>
+              <div class="car__slide"><img src="images/paneltruck-2.jpg" alt="Classic red panel truck fender and wheel" loading="lazy"></div>
+              <div class="car__slide"><img src="images/paneltruck-3.jpg" alt="Classic panel truck cab interior detailed" loading="lazy"></div>
+            </div>
+            <button class="car__nav car__nav--prev" type="button" aria-label="Previous photo"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></button>
+            <button class="car__nav car__nav--next" type="button" aria-label="Next photo"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
+            <span class="car__count" aria-hidden="true"></span>
+            <div class="car__dots" aria-hidden="true"></div>
+            <figcaption>Classic panel truck — full detail</figcaption>
+          </figure>
+
+          <figure class="shot car reveal" data-carousel aria-roledescription="carousel" aria-label="Ram pickup photos">
+            <div class="car__track" tabindex="0">
+              <div class="car__slide"><img src="images/ram-1.jpg" alt="Black Ram pickup rear after a full detail" loading="lazy"></div>
+              <div class="car__slide"><img src="images/ram-2.jpg" alt="Black Ram pickup side after detailing" loading="lazy"></div>
+              <div class="car__slide"><img src="images/ram-3.jpg" alt="Ram pickup cloth bench cleaned" loading="lazy"></div>
+              <div class="car__slide"><img src="images/ram-4.jpg" alt="Ram pickup cockpit cleaned and conditioned" loading="lazy"></div>
+              <div class="car__slide"><img src="images/ram-5.jpg" alt="Ram pickup off-road wheel after cleaning" loading="lazy"></div>
+            </div>
+            <button class="car__nav car__nav--prev" type="button" aria-label="Previous photo"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></button>
+            <button class="car__nav car__nav--next" type="button" aria-label="Next photo"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
+            <span class="car__count" aria-hidden="true"></span>
+            <div class="car__dots" aria-hidden="true"></div>
+            <figcaption>Ram pickup — full detail</figcaption>
+          </figure>
+
+          <figure class="shot car reveal" data-carousel aria-roledescription="carousel" aria-label="Kia Sorento photos">
+            <div class="car__track" tabindex="0">
+              <div class="car__slide"><img src="images/sorento-1.jpg" alt="Burgundy Kia Sorento rear three-quarter after a full detail" loading="lazy"></div>
+              <div class="car__slide"><img src="images/sorento-2.jpg" alt="Burgundy Kia Sorento side during rinse" loading="lazy"></div>
+              <div class="car__slide"><img src="images/sorento-3.jpg" alt="Kia Sorento rear seats cleaned" loading="lazy"></div>
+              <div class="car__slide"><img src="images/sorento-4.jpg" alt="Kia Sorento front interior cleaned" loading="lazy"></div>
+              <div class="car__slide"><img src="images/sorento-5.jpg" alt="Kia Sorento wheel after cleaning" loading="lazy"></div>
+            </div>
+            <button class="car__nav car__nav--prev" type="button" aria-label="Previous photo"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></button>
+            <button class="car__nav car__nav--next" type="button" aria-label="Next photo"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
+            <span class="car__count" aria-hidden="true"></span>
+            <div class="car__dots" aria-hidden="true"></div>
+            <figcaption>Kia Sorento — full detail</figcaption>
+          </figure>
+
+          <figure class="shot car reveal" data-carousel aria-roledescription="carousel" aria-label="Subaru photos">
+            <div class="car__track" tabindex="0">
+              <div class="car__slide"><img src="images/subaru-1.jpg" alt="Gray Subaru front after a full detail" loading="lazy"></div>
+              <div class="car__slide"><img src="images/subaru-2.jpg" alt="Gray Subaru rear three-quarter after detailing" loading="lazy"></div>
+              <div class="car__slide"><img src="images/subaru-3.jpg" alt="Subaru seats cleaned" loading="lazy"></div>
+              <div class="car__slide"><img src="images/subaru-4.jpg" alt="Subaru rear seats cleaned" loading="lazy"></div>
+              <div class="car__slide"><img src="images/subaru-5.jpg" alt="Subaru wheel after cleaning" loading="lazy"></div>
+            </div>
+            <button class="car__nav car__nav--prev" type="button" aria-label="Previous photo"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></button>
+            <button class="car__nav car__nav--next" type="button" aria-label="Next photo"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
+            <span class="car__count" aria-hidden="true"></span>
+            <div class="car__dots" aria-hidden="true"></div>
+            <figcaption>Subaru — full detail</figcaption>
+          </figure>
+
+          <figure class="shot car reveal" data-carousel aria-roledescription="carousel" aria-label="Subaru Outback photos">
+            <div class="car__track" tabindex="0">
+              <div class="car__slide"><img src="images/outback-1.jpg" alt="Red Subaru Outback side after a full detail" loading="lazy"></div>
+              <div class="car__slide"><img src="images/outback-2.jpg" alt="Red Subaru Outback rear after detailing" loading="lazy"></div>
+              <div class="car__slide"><img src="images/outback-3.jpg" alt="Subaru Outback cargo area cleaned" loading="lazy"></div>
+              <div class="car__slide"><img src="images/outback-4.jpg" alt="Subaru Outback seats cleaned" loading="lazy"></div>
+              <div class="car__slide"><img src="images/outback-5.jpg" alt="Subaru Outback rear cargo cleaned" loading="lazy"></div>
+            </div>
+            <button class="car__nav car__nav--prev" type="button" aria-label="Previous photo"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></button>
+            <button class="car__nav car__nav--next" type="button" aria-label="Next photo"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
+            <span class="car__count" aria-hidden="true"></span>
+            <div class="car__dots" aria-hidden="true"></div>
+            <figcaption>Subaru Outback — full detail</figcaption>
+          </figure>
+
+          <figure class="shot car reveal" data-carousel aria-roledescription="carousel" aria-label="GMC Yukon photos">
+            <div class="car__track" tabindex="0">
+              <div class="car__slide"><img src="images/yukon-1.jpg" alt="GMC Yukon front interior after detailing" loading="lazy"></div>
+              <div class="car__slide"><img src="images/yukon-2.jpg" alt="GMC Yukon rear bench cleaned" loading="lazy"></div>
+              <div class="car__slide"><img src="images/yukon-3.jpg" alt="GMC Yukon third row cleaned" loading="lazy"></div>
+            </div>
+            <button class="car__nav car__nav--prev" type="button" aria-label="Previous photo"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></button>
+            <button class="car__nav car__nav--next" type="button" aria-label="Next photo"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
+            <span class="car__count" aria-hidden="true"></span>
+            <div class="car__dots" aria-hidden="true"></div>
+            <figcaption>GMC Yukon — interior detail</figcaption>
+          </figure>
+
+          <figure class="shot car reveal" data-carousel aria-roledescription="carousel" aria-label="Honda CR-V photos">
+            <div class="car__track" tabindex="0">
+              <div class="car__slide"><img src="images/crv-1.jpg" alt="Honda CR-V rear three-quarter after a full detail" loading="lazy"></div>
+              <div class="car__slide"><img src="images/crv-2.jpg" alt="Honda CR-V front corner after detailing" loading="lazy"></div>
+              <div class="car__slide"><img src="images/crv-3.jpg" alt="Honda CR-V cockpit cleaned" loading="lazy"></div>
+              <div class="car__slide"><img src="images/crv-4.jpg" alt="Honda CR-V rear seats cleaned" loading="lazy"></div>
+              <div class="car__slide"><img src="images/crv-5.jpg" alt="Honda CR-V cargo area cleaned" loading="lazy"></div>
+            </div>
+            <button class="car__nav car__nav--prev" type="button" aria-label="Previous photo"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></button>
+            <button class="car__nav car__nav--next" type="button" aria-label="Next photo"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
+            <span class="car__count" aria-hidden="true"></span>
+            <div class="car__dots" aria-hidden="true"></div>
+            <figcaption>Honda CR-V — full detail</figcaption>
+          </figure>
+
         </div>
       </div>
     </section>

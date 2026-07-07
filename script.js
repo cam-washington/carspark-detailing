@@ -70,6 +70,55 @@
     sections.forEach((s) => spy.observe(s));
   }
 
+  /* ---------- Per-car gallery carousels ---------- */
+  const motionOK = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  $$("[data-carousel]").forEach((card) => {
+    const track = $(".car__track", card);
+    const slides = $$(".car__slide", track);
+    const prev = $(".car__nav--prev", card);
+    const next = $(".car__nav--next", card);
+    const count = $(".car__count", card);
+    const dotsBox = $(".car__dots", card);
+    const n = slides.length;
+
+    if (n < 2) { [prev, next, dotsBox, count].forEach((el) => el && (el.style.display = "none")); return; }
+
+    const dots = slides.map((_, i) => {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.setAttribute("aria-label", "Go to photo " + (i + 1));
+      b.addEventListener("click", () => goTo(i));
+      dotsBox.appendChild(b);
+      return b;
+    });
+
+    const index = () => Math.max(0, Math.min(n - 1, Math.round(track.scrollLeft / track.clientWidth)));
+    const goTo = (i) => track.scrollTo({ left: i * track.clientWidth, behavior: motionOK ? "smooth" : "auto" });
+
+    const update = () => {
+      const i = index();
+      count.textContent = (i + 1) + "/" + n;
+      dots.forEach((d, k) => d.classList.toggle("active", k === i));
+      prev.disabled = i === 0;
+      next.disabled = i === n - 1;
+    };
+
+    prev.addEventListener("click", () => goTo(index() - 1));
+    next.addEventListener("click", () => goTo(index() + 1));
+    track.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowLeft") { e.preventDefault(); goTo(index() - 1); }
+      if (e.key === "ArrowRight") { e.preventDefault(); goTo(index() + 1); }
+    });
+
+    let raf = 0;
+    track.addEventListener("scroll", () => {
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(update);
+    }, { passive: true });
+    window.addEventListener("resize", update);
+    update();
+  });
+
   /* ---------- Before / After slider ---------- */
   const ba = $("#beforeAfter");
   if (ba) {
