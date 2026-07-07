@@ -356,9 +356,17 @@ h1,h2,h3,h4 { font-family: "Sora", sans-serif; font-weight: 700; line-height: 1.
 .faq__foot a:hover { color: #fff; }
 
 /* ---------- Contact ---------- */
-.contact { display: grid; grid-template-columns: .9fr 1.1fr; gap: clamp(1.8rem, 4vw, 3.5rem); align-items: start; }
-.contact__actions { display: flex; flex-wrap: wrap; gap: .8rem; margin-bottom: 2rem; }
-.contact__list { display: grid; gap: 1.05rem; }
+.contact {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  grid-template-areas: "actions form" "list form";
+  grid-template-rows: auto 1fr;
+  column-gap: clamp(1.8rem, 4vw, 3.5rem); row-gap: 2rem;
+  align-items: start;
+}
+.contact__actions { grid-area: actions; display: flex; flex-wrap: wrap; gap: .8rem; }
+.contact__list { grid-area: list; display: grid; gap: 1.05rem; align-self: start; }
+.form { grid-area: form; }
 .contact__list li { display: flex; align-items: center; gap: .75rem; color: var(--muted); font-size: .98rem; }
 .contact__list .ico { width: 20px; height: 20px; flex: 0 0 auto; stroke: var(--violet-bright); }
 .contact__list a:hover { color: #fff; }
@@ -420,7 +428,11 @@ h1,h2,h3,h4 { font-family: "Sora", sans-serif; font-weight: 700; line-height: 1.
   .steps, .quotes { grid-template-columns: 1fr; }
   .services { grid-template-columns: 1fr; }
   .plans { grid-template-columns: 1fr; max-width: 480px; }
-  .contact { grid-template-columns: 1fr; }
+  /* contact on phones: quick actions -> form -> compact info */
+  .contact { grid-template-columns: 1fr; grid-template-areas: "actions" "form" "list"; grid-template-rows: none; row-gap: 1.5rem; }
+  .contact__list { gap: .85rem; padding-top: .4rem; }
+  .contact__list li:first-child { display: none; } /* phone number already on the buttons above */
+  .form { padding: 1.3rem 1.1rem 1.5rem; }
   .footer__grid { grid-template-columns: 1fr 1fr; }
   .footer__brand { grid-column: 1 / -1; }
 }
