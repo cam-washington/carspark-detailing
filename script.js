@@ -119,6 +119,40 @@
     update();
   });
 
+  /* ---------- Contact form (FormSubmit relay) ---------- */
+  const cform = $("#contactForm");
+  if (cform) {
+    const status = $("#cfStatus");
+    const submitBtn = $("#cfSubmit");
+    cform.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      if (!cform.reportValidity()) return;
+      const original = submitBtn.textContent;
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Sending…";
+      status.textContent = "";
+      status.className = "form__status";
+      try {
+        const data = Object.fromEntries(new FormData(cform).entries());
+        const res = await fetch("https://formsubmit.co/ajax/sparksmobileautodetailing@gmail.com", {
+          method: "POST",
+          headers: { "Content-Type": "application/json", "Accept": "application/json" },
+          body: JSON.stringify({ ...data, _subject: "New message from carsparkdetailing.com" }),
+        });
+        if (!res.ok) throw new Error("relay error");
+        cform.reset();
+        status.textContent = "Message sent — we'll get back to you shortly. Thanks!";
+        status.className = "form__status form__status--ok";
+      } catch {
+        status.textContent = "Couldn't send right now — please text or call (775) 409-5831 instead.";
+        status.className = "form__status form__status--err";
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = original;
+      }
+    });
+  }
+
   /* ---------- Before / After slider ---------- */
   const ba = $("#beforeAfter");
   if (ba) {
