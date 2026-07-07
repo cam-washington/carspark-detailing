@@ -2,5 +2,4 @@
 User-agent: *
 Allow: /
 
-# Replace {{DOMAIN}} with your live URL once the domain is set up
-Sitemap: {{DOMAIN}}/sitemap.xml
+Sitemap: https://carsparkdetailing.com/sitemap.xml
