@@ -119,11 +119,30 @@
     update();
   });
 
-  /* ---------- Contact form (FormSubmit relay) ---------- */
+  /* ---------- Contact form (FormSubmit relay + Supabase lead log) ---------- */
   const cform = $("#contactForm");
   if (cform) {
     const status = $("#cfStatus");
     const submitBtn = $("#cfSubmit");
+
+    // Logs the lead to Supabase independently of the FormSubmit relay, so a
+    // hiccup in one system doesn't take out the other.
+    const logLead = (data) => {
+      if (!window.sb) return;
+      window.sb
+        .from("leads")
+        .insert({
+          name: data.name,
+          email: data.email || null,
+          phone: data.phone || null,
+          message: data.message || null,
+          source: "website form",
+        })
+        .then(({ error }) => {
+          if (error) console.error("Supabase lead insert failed:", error);
+        });
+    };
+
     cform.addEventListener("submit", async (e) => {
       e.preventDefault();
       if (!cform.reportValidity()) return;
@@ -132,8 +151,9 @@
       submitBtn.textContent = "Sending…";
       status.textContent = "";
       status.className = "form__status";
+      const data = Object.fromEntries(new FormData(cform).entries());
+      logLead(data);
       try {
-        const data = Object.fromEntries(new FormData(cform).entries());
         const res = await fetch("https://formsubmit.co/ajax/sparksmobileautodetailing@gmail.com", {
           method: "POST",
           headers: { "Content-Type": "application/json", "Accept": "application/json" },
